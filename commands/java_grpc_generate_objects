@@ -1,0 +1,8 @@
+set PROTO_FOLDER_PATH="D:\git_workspace\gRPCProject\ProtocFile"
+set PROTO_PLUGIN_PATH="D:\git_workspace\gRPCProject\gRPCRelatedFiles"
+set OUTPUT_DIR="D:\git_workspace\gRPCProject\ProtocFile"
+
+# Generate Service Class and objects generated out of the message types
+# Note: whole path and protoc-gen-grpc-java-1.54.1-windows-x86_64.exe needed for  --plugin=protoc-gen-grpc-java
+
+protoc --proto_path=%PROTO_FOLDER_PATH% --plugin=protoc-gen-grpc-java=%PROTO_PLUGIN_PATH%\protoc-gen-grpc-java-1.54.1-windows-x86_64.exe --grpc-java_out=%OUTPUT_DIR% --java_out=%OUTPUT_DIR% %PROTO_FOLDER_PATH%\Employee.proto
